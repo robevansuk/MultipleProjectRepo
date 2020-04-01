@@ -4,9 +4,9 @@ import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,12 +16,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.awt.event.ActionEvent;
-import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 
 public class LoginController{
@@ -44,17 +39,29 @@ public class LoginController{
     private Button btnExit;
 
 
-    public void login(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void login(ActionEvent actionEvent) throws IOException {
         System.out.println("Login button clicked.");
 
-        Parent root = FXMLLoader.load(getClass().getResource("Calender.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene scene = btnLogin.getScene();
 
         root.translateXProperty().set(scene.getWidth());
         parentContainer.getChildren().add(root);
-    }
-    public void exit(javafx.event.ActionEvent actionEvent) {
 
+        Timeline timeline = new Timeline();
+
+        KeyValue keyValue = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_BOTH);
+        KeyFrame keyFrame = new KeyFrame(Duration.millis(500), keyValue);
+
+        timeline.getKeyFrames().add(keyFrame);
+        timeline.setOnFinished(event->{
+            parentContainer.getChildren().remove(borderRoot);
+        });
+        timeline.play();
+
+    }
+
+    public void exit(ActionEvent actionEvent) {
         Stage stage = (Stage) btnExit.getScene().getWindow();
         stage.close();
     }

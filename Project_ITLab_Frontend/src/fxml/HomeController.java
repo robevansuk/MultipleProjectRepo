@@ -6,8 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class CalenderController {
-
+public class HomeController {
     @FXML
     private Button btnExit;
 
@@ -20,5 +19,4 @@ public class CalenderController {
         Stage stage = (Stage) btnExit.getScene().getWindow();
         stage.close();
     }
-
 }
