@@ -12,30 +12,11 @@ src: url(“Retro.ttf”);
     -fx-font-family: "../../resources/SFALienEncounters";
     -fx-font-size:24px;
     -fx-background-color: -white;
-    -fx-background-image : url("../../resources/HoGent.jpg");
-    -fx-background-size: stretch;
+    -fx-background-image : url("../resources/HoGent.jpg");
+    -fx-background-size: cover;
     -fx-background-position: center center;
     -fx-fill-width : true;
     -fx-fill-height : true;
     -fx-focus-color : transparent;
     -fx-faint-focus-color: transparent;
-}
-.text{
-
-}
-.button{
-    -fx-color:black;
-}
-#textField{
-    -fx-background-color:transparent;
-    -fx-alignment: center-right ;
-    -fx-border-width: 1px;
-    -fx-border-color:-gradient;
-}
-.text-input{
-    -fx-text-fill:-gradient;
-    -fx-font-family:"VCR OSD Mono";
-}
-.text-area .content{
-    -fx-background-color:black;
 }
