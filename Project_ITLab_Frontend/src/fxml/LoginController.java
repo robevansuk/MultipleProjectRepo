@@ -41,9 +41,18 @@ public class LoginController{
 
     public void login(ActionEvent actionEvent) throws IOException {
         System.out.println("Login button clicked.");
+        //check if login correct
 
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-        Scene scene = btnLogin.getScene();
+
+
+        //on success get home screen
+        changeScreen("Home");
+
+    }
+
+    private void changeScreen(String view) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(view + ".fxml"));
+        Scene scene = borderRoot.getScene();
 
         root.translateXProperty().set(scene.getWidth());
         parentContainer.getChildren().add(root);
@@ -58,7 +67,6 @@ public class LoginController{
             parentContainer.getChildren().remove(borderRoot);
         });
         timeline.play();
-
     }
 
     public void exit(ActionEvent actionEvent) {
