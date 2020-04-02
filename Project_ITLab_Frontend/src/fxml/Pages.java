@@ -4,7 +4,7 @@ public enum Pages {
     Login,
     Home,
     EditSession,
-    Calender,
+    ManageSession,
     Statistic,
     Announcement,
     EditUser

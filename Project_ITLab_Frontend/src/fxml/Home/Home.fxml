@@ -13,33 +13,28 @@
          <left>
             <AnchorPane prefHeight="800.0" prefWidth="250.0" style="-fx-background-color: rgb(211,211,211);" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutY="-5.0" prefHeight="806.0" prefWidth="50.0" style="-fx-background-color: rgb(112,128,144);" />
-                  <Button layoutX="50.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(112,128,144); -fx-background-radius: 0px;" text="Home" textFill="WHITE">
+                  <AnchorPane layoutY="-5.0" prefHeight="800.0" prefWidth="50.0" style="-fx-background-color: rgb(112,128,144);" />
+                  <Button layoutX="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgb(112,128,144); -fx-background-radius: 0px;" text="Home" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnEditSessions" layoutX="50.0" layoutY="53.0" mnemonicParsing="false" onAction="#openEditSessions" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Sessies beheren" textFill="SLATEGRAY">
+                  <Button fx:id="btnManageSessions" layoutX="50.0" layoutY="53.0" mnemonicParsing="false" onAction="#openManageSession" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Sessies beheren" textFill="SLATEGRAY">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCalender" layoutX="50.0" layoutY="106.0" mnemonicParsing="false" onAction="#openCalender" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Calender" textFill="SLATEGRAY">
+                  <Button fx:id="btnStatistic" layoutX="50.0" layoutY="106.0" mnemonicParsing="false" onAction="#openStatistic" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Statistieken" textFill="SLATEGRAY">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnStatistic" layoutX="50.0" layoutY="159.0" mnemonicParsing="false" onAction="#openStatistic" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Statistieken" textFill="SLATEGRAY">
+                  <Button fx:id="btnAnnouncement" layoutX="50.0" layoutY="159.0" mnemonicParsing="false" onAction="#openAnnouncement" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Aankondigingen" textFill="SLATEGRAY">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnAnnouncement" layoutX="50.0" layoutY="212.0" mnemonicParsing="false" onAction="#openAnnouncement" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Aankondigingen" textFill="SLATEGRAY">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnEditUser" layoutX="50.0" layoutY="265.0" mnemonicParsing="false" onAction="#openEditUser" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Gebruiker" textFill="SLATEGRAY">
+                  <Button fx:id="btnEditUser" layoutX="50.0" layoutY="212.0" mnemonicParsing="false" onAction="#openEditUser" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Gebruiker" textFill="SLATEGRAY">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -48,19 +43,22 @@
             </AnchorPane>
          </left>
          <center>
-            <BorderPane fx:id="borderPage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <BorderPane fx:id="borderPage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="850.0" BorderPane.alignment="CENTER">
                <top>
-                  <AnchorPane prefHeight="100.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+                  <AnchorPane prefHeight="100.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button id="loginButton" fx:id="btnExit" defaultButton="true" focusTraversable="false" layoutX="767.0" layoutY="8.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 20px;" styleClass="loginButton" text="Exit" textFill="WHITE">
+                        <Button id="loginButton" fx:id="btnExit" defaultButton="true" focusTraversable="false" layoutX="699.0" layoutY="30.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 20px;" styleClass="loginButton" text="Exit" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Label layoutX="586.0" layoutY="11.0" text="Welkom, Dzhem" />
+                        <Label layoutX="509.0" layoutY="13.0" text="Welkom, Dzhem" />
                      </children>
                   </AnchorPane>
                </top>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
             </BorderPane>
          </center>
       </BorderPane>
