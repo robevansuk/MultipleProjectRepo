@@ -1,5 +1,6 @@
 package fxml.Login;
 
+import fxml.Pages;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -30,7 +31,7 @@ public class LoginController{
     private Button btnLogin;
 
     @FXML
-    private StackPane parentContainer;
+    private BorderPane parentContainer;
 
     @FXML
     private BorderPane borderRoot;
@@ -46,12 +47,12 @@ public class LoginController{
 
 
         //on success get home screen
-        changeScreen("Home");
+        changeScreen(Pages.Home);
 
     }
 
-    private void changeScreen(String view) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(view + ".fxml"));
+    private void changeScreen(Pages page) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../" + page.name() + "/"+ page.name() +".fxml"));
         Scene scene = borderRoot.getScene();
 
         root.translateXProperty().set(scene.getWidth());

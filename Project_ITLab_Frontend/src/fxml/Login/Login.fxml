@@ -10,12 +10,12 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="parentContainer" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Login.LoginController">
-    <children>
-        <BorderPane id="LoginPane" fx:id="borderRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../../resources/styles/style.css">
+
+<BorderPane fx:id="parentContainer" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Login.LoginController">
+   <center>
+        <BorderPane id="LoginPane" fx:id="borderRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../../resources/styles/style.css" BorderPane.alignment="CENTER">
             <bottom>
                 <AnchorPane prefHeight="50.0" prefWidth="1100.0" style="-fx-background-color: grey; -fx-opacity: 0.7;" BorderPane.alignment="CENTER">
                     <children>
@@ -53,7 +53,7 @@
                                                 <Image url="@../../resources/imgs/hogent-logo.png" />
                                             </image>
                                         </ImageView>
-                              <Button id="loginButton" fx:id="btnExit" defaultButton="true" focusTraversable="false" layoutX="1017.0" layoutY="14.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.ConfirmButtonSkin'; -fx-background-radius: 20px;" styleClass="loginButton" text="Exit" textFill="WHITE">
+                              <Button id="loginButton" fx:id="btnExit" defaultButton="true" focusTraversable="false" layoutX="1017.0" layoutY="14.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 20px;" styleClass="loginButton" text="Exit" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -66,7 +66,7 @@
                <center>
                         <Pane maxHeight="250.0" maxWidth="600.0" minWidth="250.0" prefHeight="249.0" prefWidth="500.0" style="-fx-background-color: rgba(255,255,255,0.7);;" BorderPane.alignment="CENTER">
                             <children>
-                                <Button id="loginButton" fx:id="btnLogin" defaultButton="true" focusTraversable="false" layoutX="190.0" layoutY="175.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgba(34,139,34); -fx-skin: 'fxml.ConfirmButtonSkin'; -fx-background-radius: 10px;" styleClass="loginButton" text="Log in" textFill="WHITE">
+                                <Button id="loginButton" fx:id="btnLogin" defaultButton="true" focusTraversable="false" layoutX="190.0" layoutY="175.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgba(34,139,34); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 10px;" styleClass="loginButton" text="Log in" textFill="WHITE">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -87,5 +87,5 @@
                 </BorderPane>
             </left>
         </BorderPane>
-    </children>
-</StackPane>
+   </center>
+</BorderPane>

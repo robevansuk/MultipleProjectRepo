@@ -26,19 +26,7 @@ public class CalenderController {
     private BorderPane borderRoot;
 
     @FXML
-    private Button btnHome;
-
-    @FXML
-    private Button btnStatistic;
-
-    @FXML
-    private Button btnCreateSession;
-
-    @FXML
-    private Button btnAnnouncement;
-
-    @FXML
-    private StackPane parentContainer;
+    private BorderPane parentContainer;
 
 
     public void exit(ActionEvent actionEvent) {
@@ -55,8 +43,10 @@ public class CalenderController {
         System.out.println("Statistic");
     }
 
-    public void openCreateSession(ActionEvent actionEvent) {
+    public void openCreateSession(ActionEvent actionEvent) throws IOException {
         System.out.println("Create session");
+        Parent root = FXMLLoader.load(getClass().getResource(  "../CreateSession/CreateSession.fxml"));
+        parentContainer.setRight(root);
     }
 
     public void openAnnouncement(ActionEvent actionEvent) {
@@ -64,7 +54,7 @@ public class CalenderController {
     }
 
     private void changeScreen(String view) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(view + ".fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../" + view + "/"+ view +".fxml"));
         parentContainer.getChildren().add(root);
         parentContainer.getChildren().remove(borderRoot);
     }
