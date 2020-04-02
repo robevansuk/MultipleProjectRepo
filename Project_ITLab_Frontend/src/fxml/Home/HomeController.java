@@ -1,5 +1,6 @@
-package fxml;
+package fxml.Home;
 
+import fxml.Pages;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -10,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -28,16 +30,22 @@ public class HomeController {
     private Button btnStatistic;
 
     @FXML
-    private Button btnCreateSession;
+    private Button btnEditSessions;
+
+    @FXML
+    private Button btnEditUser;
 
     @FXML
     private Button btnAnnouncement;
 
     @FXML
-    private StackPane parentContainer;
+    private BorderPane parentContainer;
 
     @FXML
     private BorderPane borderRoot;
+
+    @FXML
+    private BorderPane borderPage;
 
     public void exit(ActionEvent actionEvent) {
         Stage stage = (Stage) btnExit.getScene().getWindow();
@@ -45,29 +53,31 @@ public class HomeController {
     }
 
     public void openCalender(ActionEvent actionEvent) throws IOException {
-        System.out.println("Calender");
-        changeScreen("Calender");
+        System.out.println(Pages.Calender.name());
+        borderPage.setCenter(FXMLLoader.load(getClass().getResource("../" + Pages.Calender.name() + "/"+ Pages.Calender.name() +".fxml")));
     }
 
     public void openStatistic(ActionEvent actionEvent) throws IOException {
-        System.out.println("Statistic");
-        changeScreen("Statistic");
+        System.out.println(Pages.Statistic.name());
     }
 
-    public void openCreateSession(ActionEvent actionEvent) throws IOException {
-        System.out.println("Create session");
-        changeScreen("CreateSession");
+    public void openEditSessions(ActionEvent actionEvent) throws IOException {
+        System.out.println(Pages.EditSession.name());
     }
 
     public void openAnnouncement(ActionEvent actionEvent) throws IOException {
-        System.out.println("Announcement");
-        changeScreen("Announcement");
+        System.out.println(Pages.Announcement.name());
     }
 
-    private void changeScreen(String view) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(view + ".fxml"));
-        parentContainer.getChildren().add(root);
-        parentContainer.getChildren().remove(borderRoot);
+    public void openEditUser(ActionEvent actionEvent) throws IOException {
+        System.out.println(Pages.EditUser.name());
     }
+
+    private void changeScreen(Pages page) throws IOException {
+
+
+    }
+
+
 
 }

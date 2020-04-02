@@ -1,26 +1,22 @@
-package fxml;
+package fxml.Statistic;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class CreateSessionController {
+public class StatisticController {
     @FXML
     private Button btnExit;
 
     @FXML
-    private BorderPane borderRoot;
+    private Button btnHome;
 
     @FXML
     private Button btnCalender;
 
     @FXML
-    private Button btnStatistic;
-
-    @FXML
-    private Button btnHome;
+    private Button btnCreateSession;
 
     @FXML
     private Button btnAnnouncement;
@@ -34,15 +30,16 @@ public class CreateSessionController {
         System.out.println("Calender");
     }
 
-    public void openStatistic(ActionEvent actionEvent) {
-        System.out.println("Statistic");
-    }
-
     public void openHome(ActionEvent actionEvent) {
         System.out.println("Home");
+    }
+
+    public void openCreateSession(ActionEvent actionEvent) {
+        System.out.println("Create session");
     }
 
     public void openAnnouncement(ActionEvent actionEvent) {
         System.out.println("Announcement");
     }
+
 }

@@ -1,4 +1,4 @@
-package fxml;
+package fxml.Skins;
 
 import javafx.animation.FadeTransition;
 import javafx.scene.control.Button;
