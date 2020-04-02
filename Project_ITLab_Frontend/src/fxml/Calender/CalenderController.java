@@ -1,4 +1,4 @@
-package fxml;
+package fxml.Calender;
 
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -17,12 +17,16 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 
-public class HomeController {
+public class CalenderController {
+
     @FXML
     private Button btnExit;
 
     @FXML
-    private Button btnCalender;
+    private BorderPane borderRoot;
+
+    @FXML
+    private Button btnHome;
 
     @FXML
     private Button btnStatistic;
@@ -36,32 +40,27 @@ public class HomeController {
     @FXML
     private StackPane parentContainer;
 
-    @FXML
-    private BorderPane borderRoot;
 
     public void exit(ActionEvent actionEvent) {
         Stage stage = (Stage) btnExit.getScene().getWindow();
         stage.close();
     }
 
-    public void openCalender(ActionEvent actionEvent) throws IOException {
-        System.out.println("Calender");
-        changeScreen("Calender");
+    public void openHome(ActionEvent actionEvent) throws IOException {
+        System.out.println("Home");
+        changeScreen("Home");
     }
 
-    public void openStatistic(ActionEvent actionEvent) throws IOException {
+    public void openStatistic(ActionEvent actionEvent) {
         System.out.println("Statistic");
-        changeScreen("Statistic");
     }
 
-    public void openCreateSession(ActionEvent actionEvent) throws IOException {
+    public void openCreateSession(ActionEvent actionEvent) {
         System.out.println("Create session");
-        changeScreen("CreateSession");
     }
 
-    public void openAnnouncement(ActionEvent actionEvent) throws IOException {
+    public void openAnnouncement(ActionEvent actionEvent) {
         System.out.println("Announcement");
-        changeScreen("Announcement");
     }
 
     private void changeScreen(String view) throws IOException {
@@ -69,5 +68,4 @@ public class HomeController {
         parentContainer.getChildren().add(root);
         parentContainer.getChildren().remove(borderRoot);
     }
-
 }

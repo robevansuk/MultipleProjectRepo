@@ -1,11 +1,11 @@
-package fxml;
+package fxml.Announcement;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class StatisticController {
+public class AnnouncementController {
     @FXML
     private Button btnExit;
 
@@ -13,13 +13,13 @@ public class StatisticController {
     private Button btnHome;
 
     @FXML
-    private Button btnCalender;
+    private Button btnStatistic;
 
     @FXML
     private Button btnCreateSession;
 
     @FXML
-    private Button btnAnnouncement;
+    private Button btnCalender;
 
     public void exit(ActionEvent actionEvent) {
         Stage stage = (Stage) btnExit.getScene().getWindow();
@@ -30,16 +30,15 @@ public class StatisticController {
         System.out.println("Calender");
     }
 
-    public void openHome(ActionEvent actionEvent) {
-        System.out.println("Home");
+    public void openStatistic(ActionEvent actionEvent) {
+        System.out.println("Statistic");
     }
 
     public void openCreateSession(ActionEvent actionEvent) {
         System.out.println("Create session");
     }
 
-    public void openAnnouncement(ActionEvent actionEvent) {
-        System.out.println("Announcement");
+    public void openHome(ActionEvent actionEvent) {
+        System.out.println("Home");
     }
-
 }

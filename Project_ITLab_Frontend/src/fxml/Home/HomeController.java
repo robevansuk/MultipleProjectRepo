@@ -1,4 +1,4 @@
-package fxml;
+package fxml.Home;
 
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -17,16 +17,12 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 
-public class CalenderController {
-
+public class HomeController {
     @FXML
     private Button btnExit;
 
     @FXML
-    private BorderPane borderRoot;
-
-    @FXML
-    private Button btnHome;
+    private Button btnCalender;
 
     @FXML
     private Button btnStatistic;
@@ -40,32 +36,37 @@ public class CalenderController {
     @FXML
     private StackPane parentContainer;
 
+    @FXML
+    private BorderPane borderRoot;
 
     public void exit(ActionEvent actionEvent) {
         Stage stage = (Stage) btnExit.getScene().getWindow();
         stage.close();
     }
 
-    public void openHome(ActionEvent actionEvent) throws IOException {
-        System.out.println("Home");
-        changeScreen("Home");
+    public void openCalender(ActionEvent actionEvent) throws IOException {
+        System.out.println("Calender");
+        changeScreen("Calender");
     }
 
-    public void openStatistic(ActionEvent actionEvent) {
+    public void openStatistic(ActionEvent actionEvent) throws IOException {
         System.out.println("Statistic");
+        changeScreen("Statistic");
     }
 
-    public void openCreateSession(ActionEvent actionEvent) {
+    public void openCreateSession(ActionEvent actionEvent) throws IOException {
         System.out.println("Create session");
+        changeScreen("CreateSession");
     }
 
-    public void openAnnouncement(ActionEvent actionEvent) {
+    public void openAnnouncement(ActionEvent actionEvent) throws IOException {
         System.out.println("Announcement");
+        changeScreen("Announcement");
     }
 
     private void changeScreen(String view) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(view + ".fxml"));
-        parentContainer.getChildren().add(root);
+        parentContainer.getChildren().add(FXMLLoader.load(getClass().getResource(view + ".fxml")));
         parentContainer.getChildren().remove(borderRoot);
     }
+
 }

@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="parentContainer" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.LoginController">
+<StackPane fx:id="parentContainer" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Login.LoginController">
     <children>
-        <BorderPane id="LoginPane" fx:id="borderRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../resources/styles/style.css">
+        <BorderPane id="LoginPane" fx:id="borderRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../../resources/styles/style.css">
             <bottom>
                 <AnchorPane prefHeight="50.0" prefWidth="1100.0" style="-fx-background-color: grey; -fx-opacity: 0.7;" BorderPane.alignment="CENTER">
                     <children>
@@ -42,7 +42,7 @@
                            <children>
                               <ImageView fitHeight="750.0" layoutX="-33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/imgs/HoGent.jpg" />
+                                    <Image url="@../../resources/imgs/HoGent.jpg" />
                                  </image>
                                  <effect>
                                     <BoxBlur height="8.04" iterations="3" width="8.03" />
@@ -50,7 +50,7 @@
                               </ImageView>
                                         <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../resources/imgs/hogent-logo.png" />
+                                                <Image url="@../../resources/imgs/hogent-logo.png" />
                                             </image>
                                         </ImageView>
                               <Button id="loginButton" fx:id="btnExit" defaultButton="true" focusTraversable="false" layoutX="1017.0" layoutY="14.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.ConfirmButtonSkin'; -fx-background-radius: 20px;" styleClass="loginButton" text="Exit" textFill="WHITE">

@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.CalenderController">
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Home.HomeController">
    <children>
-      <BorderPane id="LoginPane" fx:id="borderRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../resources/styles/style.css">
+      <BorderPane id="LoginPane" fx:id="borderRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../../resources/styles/style.css">
          <left>
             <AnchorPane prefHeight="800.0" prefWidth="250.0" style="-fx-background-color: rgb(211,211,211);" BorderPane.alignment="CENTER">
                <children>
                   <AnchorPane layoutY="-5.0" prefHeight="806.0" prefWidth="50.0" style="-fx-background-color: rgb(112,128,144);" />
-                  <Button fx:id="btnHome" layoutX="50.0" mnemonicParsing="false" onAction="#openHome" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Home" textFill="SLATEGRAY">
+                  <Button layoutX="50.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(112,128,144); -fx-background-radius: 0px;" text="Home" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button layoutX="50.0" layoutY="53.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(112,128,144); -fx-background-radius: 0px;" text="Calender" textFill="WHITE">
+                  <Button fx:id="btnCalender" layoutX="50.0" layoutY="53.0" mnemonicParsing="false" onAction="#openCalender" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Calender" textFill="SLATEGRAY">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -34,7 +34,7 @@
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnAnnouncment" layoutX="50.0" layoutY="212.0" mnemonicParsing="false" onAction="#openAnnouncement" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Aankondigingen" textFill="SLATEGRAY">
+                  <Button fx:id="btnAnnouncement" layoutX="50.0" layoutY="212.0" mnemonicParsing="false" onAction="#openAnnouncement" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211); -fx-background-radius: 0px; -fx-border-color: rgb(169,169,169);" text="Aankondigingen" textFill="SLATEGRAY">
                      <font>
                         <Font size="21.0" />
                      </font>
