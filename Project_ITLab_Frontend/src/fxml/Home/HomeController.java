@@ -44,6 +44,9 @@ public class HomeController {
     @FXML
     private BorderPane borderRoot;
 
+    @FXML
+    private BorderPane borderPage;
+
     public void exit(ActionEvent actionEvent) {
         Stage stage = (Stage) btnExit.getScene().getWindow();
         stage.close();
@@ -51,8 +54,7 @@ public class HomeController {
 
     public void openCalender(ActionEvent actionEvent) throws IOException {
         System.out.println(Pages.Calender.name());
-        BorderPane pane = (BorderPane) borderRoot.getCenter();
-        pane.setCenter((FXMLLoader.load(getClass().getResource("../" + Pages.Calender.name() + "/"+ Pages.Calender.name() +".fxml"))));
+        borderPage.setCenter(FXMLLoader.load(getClass().getResource("../" + Pages.Calender.name() + "/"+ Pages.Calender.name() +".fxml")));
     }
 
     public void openStatistic(ActionEvent actionEvent) throws IOException {

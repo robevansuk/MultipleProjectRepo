@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.CreateSession.CreateSessionController">
    <children>
       <TextField layoutX="26.0" layoutY="75.0" promptText="test" />
-      <TextField layoutX="26.0" layoutY="140.0" promptText="test" />
-      <TextField layoutX="26.0" layoutY="208.0" promptText="test" />
-      <TextField layoutX="26.0" layoutY="283.0" promptText="test" />
-      <TextField layoutX="26.0" layoutY="355.0" promptText="test" />
+      <TextField layoutX="26.0" layoutY="126.0" promptText="test" />
+      <TextField layoutX="26.0" layoutY="178.0" promptText="test" />
+      <TextField layoutX="26.0" layoutY="232.0" promptText="test" />
+      <TextField layoutX="26.0" layoutY="288.0" promptText="test" />
+      <Button id="loginButton" fx:id="btnLogin" defaultButton="true" focusTraversable="false" layoutX="115.0" layoutY="539.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: rgba(34,139,34); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 10px;" styleClass="loginButton" text="Save" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button id="loginButton" fx:id="btnLogin1" defaultButton="true" focusTraversable="false" layoutX="26.0" layoutY="539.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 10px;" styleClass="loginButton" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
