@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.ManageSession.ManageSessionController">
    <center>
       <ListView onEditStart="#editSession" prefHeight="600.0" prefWidth="575.0" BorderPane.alignment="CENTER" />
    </center>
@@ -33,7 +33,7 @@
    <bottom>
       <Pane prefHeight="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="526.0" layoutY="13.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="btnTest" layoutX="526.0" layoutY="13.0" mnemonicParsing="false" onAction="#editSession" text="Button" />
          </children>
       </Pane>
    </bottom>

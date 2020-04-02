@@ -30,7 +30,7 @@ public class HomeController {
     private Button btnStatistic;
 
     @FXML
-    private Button btnEditSessions;
+    private Button btnManageSessions;
 
     @FXML
     private Button btnEditUser;
@@ -52,9 +52,9 @@ public class HomeController {
         stage.close();
     }
 
-    public void openCalender(ActionEvent actionEvent) throws IOException {
-        System.out.println(Pages.Calender.name());
-        borderPage.setCenter(FXMLLoader.load(getClass().getResource("../" + Pages.Calender.name() + "/"+ Pages.Calender.name() +".fxml")));
+    public void openManageSession(ActionEvent actionEvent) throws IOException {
+        System.out.println(Pages.ManageSession.name());
+        borderPage.setCenter(FXMLLoader.load(getClass().getResource("../" + Pages.ManageSession.name() + "/"+ Pages.ManageSession.name() +".fxml")));
     }
 
     public void openStatistic(ActionEvent actionEvent) throws IOException {
