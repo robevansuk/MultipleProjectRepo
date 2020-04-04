@@ -19,8 +19,8 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 
+public class LoginController {
 
-public class LoginController{
     @FXML
     private TextField txfUsername;
 
@@ -39,11 +39,9 @@ public class LoginController{
     @FXML
     private Button btnExit;
 
-
     public void login(ActionEvent actionEvent) throws IOException {
         System.out.println("Login button clicked.");
         //check if login correct
-
 
 
         //on success get home screen

@@ -10,8 +10,6 @@ public class ConfirmButtonSkin extends ButtonSkin {
     public ConfirmButtonSkin(Button control) {
         super(control);
 
-
-
         final FadeTransition fadeIn = new FadeTransition(Duration.millis(100));
         fadeIn.setNode(control);
         fadeIn.setToValue(1);

@@ -75,9 +75,5 @@ public class HomeController {
 
     private void changeScreen(Pages page) throws IOException {
 
-
     }
-
-
-
 }

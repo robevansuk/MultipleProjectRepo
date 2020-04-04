@@ -11,14 +11,12 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         launch(args);
     }
-    @Override
-    public void start(Stage primaryStage) throws Exception
-    {
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/Login/Login.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("Login");
